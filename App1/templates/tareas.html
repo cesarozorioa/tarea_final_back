@@ -12,8 +12,12 @@
         <li>
             <h2> {% if i.done == False%} 🕔 {% else %} ✅ {% endif %}{{i.nombreT}} </h2>
                  
-        </li>           
-        <button> ✅ Done </button>        
+        
+        <form action="{% url 'actualizar_item' i.id %}" method="post">  
+            {% csrf_token %}       
+            <button type="submit"> ✅ Done </button>    
+        </form> 
+    </li>   
         {% endfor %}
         
     </ul>
