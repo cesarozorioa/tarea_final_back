@@ -1,0 +1,1 @@
+document.write("Estamos dentro de un Js ok")

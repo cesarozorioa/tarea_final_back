@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <h1>Listado de Proyectos</h1>
+    <hr>
+    <ul>
+        {% for i in objeto%}
+        <li><a href="proyectos/{{i.id}}">{{i}}</a></li> 
+
+        {% endfor %}
+    </ul>
+
+    <script src="{% static 'index.js' %}"></script>
+</body>
+</html>

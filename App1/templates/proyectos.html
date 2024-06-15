@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+</head>
+<body>
+    <h1>{{objeto.nombreP}}</h1>
+    <ul>
+        {% for i in objeto.tareadb_set.all  %}
+        <li>
+            {{i.nombreT}}
+        </li>
+        
+        {% endfor %}
+        
+    </ul>
+</body>
+</html>
