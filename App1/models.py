@@ -7,8 +7,7 @@ class ProyectoDb(models.Model):
     fechaI = models.DateField(verbose_name='Fecha Creacion',null=False,blank=False)
     fechaF = models.DateField(verbose_name='Fecha Fin',null=True,blank=True)    
     responsable = models.CharField(max_length=50,verbose_name='Responsable',null=False)
-    estado = models.BooleanField(default=False)
-    
+    estado = models.BooleanField(default=False)   
 
     class Meta:
         db_table="Proyectos"
@@ -33,7 +32,8 @@ class TareaDb(models.Model):
     fecha_inicio = models.DateField(verbose_name='Fecha Inicia')
     fecha_fin = models.DateField(verbose_name='Fecha Fin')
     asignado = models.ForeignKey(UsuarioDb, on_delete=models.CASCADE,verbose_name="Responsables")
-    proyecto_fk = models.ForeignKey(ProyectoDb, on_delete=models.CASCADE,verbose_name='Proyecto')    
+    proyecto_fk = models.ForeignKey(ProyectoDb, on_delete=models.CASCADE,verbose_name='Proyecto') 
+    done = models.BooleanField(default=False)
 
     class Meta:
         db_table="Tareas"

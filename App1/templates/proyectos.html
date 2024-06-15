@@ -10,9 +10,10 @@
     <ul>
         {% for i in objeto.tareadb_set.all  %}
         <li>
-            {{i.nombreT}}
-        </li>
-        
+            <h2> {% if i.done == False%} 🕔 {% else %} ✅ {% endif %}{{i.nombreT}} </h2>
+                 
+        </li>           
+        <button> ✅ Done </button>        
         {% endfor %}
         
     </ul>

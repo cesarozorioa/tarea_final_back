@@ -12,3 +12,4 @@ def IndexReview(request):
 def ProyectoView(request,id):
     proyecto = get_object_or_404(ProyectoDb,id=id)
     return render(request,'proyectos.html',{"objeto":proyecto})
+

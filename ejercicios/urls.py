@@ -22,4 +22,5 @@ from App1.views import IndexReview
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('App1.urls')),
+    path('api/',include('api_view.urls'))
 ]

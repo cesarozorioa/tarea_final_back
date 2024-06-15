@@ -41,9 +41,9 @@ admin.site.register(ProyectoDb, ProyectoAdmin)
 @admin.register(TareaDb)
 class TareaAdmin(admin.ModelAdmin):
     fields = ['nombreT', 'fecha_inicio',
-              'fecha_fin', 'asignado', 'proyecto_fk']
+              'fecha_fin', 'asignado', 'proyecto_fk','done']
     list_display = ['nombreT', 'fecha_inicio',
-                    'fecha_fin', 'asignado', 'proyecto_fk']
+                    'fecha_fin', 'asignado', 'proyecto_fk','done']
     list_filter = ['proyecto_fk']
     search_fields = ['nombreT']
     search_help_text = 'Busqueda por Nombre'
